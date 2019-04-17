@@ -1,0 +1,21 @@
+<?php require("header.php");?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<?php 
+session_start();
+
+ExecuteNonQuery ("UPDATE User SET isuser=false WHERE user_id='$_SESSION[uid]'");
+
+session_destroy();
+?>
+<h1>Log out</h1>
+<p>
+	You have logged out.  <a href="login.php">Click hear</a> to login again.
+</p>
+<?php require("footer.php");?>
